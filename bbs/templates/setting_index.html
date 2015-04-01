@@ -1,0 +1,35 @@
+{% extends "base3.html" %}
+{% block style %}<link rel="stylesheet" type="text/css" href="/static/css/setting.css">{% endblock %}
+{% block title %}黑狮情报所 - 激战2玩家社区{% endblock %}
+{% block index_left %}	
+	<div class="index_left">
+		<div class="setting_wrap">
+			<div class="avatar_wrap clearfix">
+				<a href="javascript:void(0);">
+					<img src="{{ user.userinfo.image.url }}"/ class="avatar_image">
+				</a>
+				<p class="username">{{ user.username }}</p>
+				<div class="avatar_right">
+					<p>vsgames第{{ user.id }}号成员</p>
+					<p>入住于{{ user.date_joined }}</p>
+				</div>
+			</div>
+			<div class="info_wrap">
+				<table>
+					<tr>
+						<td class="first_td">ID</td>
+						<td>{{ user.username }}</td>
+					</tr>
+					<tr>
+						<td class="first_td">email</td>
+						<td>{{ user.email }}</td>
+					</tr>
+					<tr>
+						<td class="first_td">昵称</td>
+						<td>{{ user.first_name }}</td>
+					</tr>
+				</table>
+			</div>
+		</div>				
+	</div>
+{% endblock %}

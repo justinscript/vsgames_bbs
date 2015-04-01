@@ -1,0 +1,36 @@
+
+.realease_wrap{
+	padding: 10px;
+}
+.realease_title{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e2e2e2;
+	margin-bottom: 8px;
+	font-size: 13px;
+}
+.topic_title{
+	width: 99%;
+	border: 1px solid #ccc;
+	padding: 3px;
+	margin: 5px 0 ;
+	height:auto!important;  
+	height:24px;  
+	min-height:24px; 
+	border-radius: 4px;
+}
+
+.topic_classify{
+	margin: 5px 0;
+	width: 80px;
+	height: 20px;
+}
+
+.realease_textarea{
+	width: 99%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	height:auto!important;  
+	height:230px;  
+	min-height:230px; 
+	padding: 3px;
+}

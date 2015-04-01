@@ -1,0 +1,30 @@
+{% extends "base3.html" %}
+{% block style %}<link rel="stylesheet" type="text/css" href="/static/css/setting.css">{% endblock %}
+{% block title %}黑狮情报所 - 激战2玩家社区{% endblock %}
+{% block js %}<script type="text/javascript" src="/static/js/reset_pwd.js"></script>{% endblock %}
+{% block index_left %}	
+	<div class="index_left">
+		<div class="setting_wrap">
+			<div class="s_form_wrap">
+				<h1 class="form_title">用户密码设置</h1>
+				<form action="#" id="reset_pwd_form" method="post">
+					<div class="input_wrap clearfix">
+						<label for="oldpassword">原密码</label>
+						<input type="password" class="form_input" id="oldpassword" name="oldpassword" placeholder="请输入原密码"/>
+					</div>
+					<div class="input_wrap clearfix">
+						<label for="newpassword">新密码</label>
+						<input type="password"  class="form_input" id="newpassword" name="newpassword" placeholder="请输入新密码"/>
+					</div>
+					<div class="input_wrap clearfix">
+						<label for="renewpassword">请重复新密码</label>
+						<input type="password"  class="form_input" id="renewpassword" name="renewpassword" placeholder="请重复新密码"/>
+					</div>
+					<div class="input_wrap clearfix">
+						<button class="my_btn" id="reset_pwd_1">重置密码</button>
+					</div>
+				</form>
+			</div>
+		</div>				
+	</div>
+{% endblock %}

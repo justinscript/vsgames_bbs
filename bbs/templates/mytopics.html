@@ -1,0 +1,27 @@
+{% extends "base2.html" %}
+{% block style %}<link rel="stylesheet" type="text/css" href="/static/css/index.css">{% endblock %}
+{% block title %}黑狮情报所 - 激战2玩家社区{% endblock %}
+{% block index_left %}	
+	<div class="index_left">
+		<div class="block_wrap">
+				{% for item in topics %}
+				{% if forloop.last %}<div class="article_title last_list clearfix">{% else %}<div class="article_title clearfix">{% endif %}	
+					<a href="javacript:void(0);" class="avatar"><img src="{{ item.user.userinfo.image.url }}"></a>
+					<div class="title_wrap">
+						<h3 class="title"><a href="/topic/{{ item.id }}" class="title_link">{{ item.title }}</a></h3>
+						<p class="date"><a href="javascript:void(0)" class="title_source">{{ item.node.title }}</a>{{ item.get_display_datetime }}</p>
+					</div>
+				</div>
+				{% endfor %}
+				{% for item in replys %}
+				{% if forloop.last %}<div class="article_title last_list clearfix">{% else %}<div class="article_title clearfix">{% endif %}	
+					<a href="javacript:void(0);" class="avatar"><img src="{{ item.user.userinfo.image.url }}"></a>
+					<div class="title_wrap">
+						<h3 class="title"><a href="/topic/{{ item.id }}" class="title_link">{{ item.title }}</a></h3>
+						<p class="date"><a href="javascript:void(0)" class="title_source">{{ item.node.title }}</a>{{ item.get_display_datetime }}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+{% endblock %}

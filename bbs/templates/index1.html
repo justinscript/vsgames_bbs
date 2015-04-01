@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ordering notice</title></head>
+
+<body>
+
+<h1>Ordering notice</h1>
+
+<form name="input" action="/signup/" method="post">
+<input type="text" name="username"/>
+<input type="password" name="password"/>
+<input type="submit">
+</form>
+<form name="input" action="/login/" method="post">
+{% csrf_token %}
+<input type="text" name="username"/>
+<input type="password" name="password"/>
+<input type="submit">
+</form>
+</body>
+</html>

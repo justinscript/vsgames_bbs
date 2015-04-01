@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/head.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+	
+	<link type="image/x-icon" href="/images/favicon.ico" rel="icon"/>
+    <link type="image/x-icon" href="/images/favicon.ico" rel="Shortcut Icon"/>
+    <link type="image/x-icon" href="/images/favicon.ico" rel="bookmark"/>
+
+	{% block style %}{% endblock %}
+	<title>{% block title %}{% endblock %}</title>
+	<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+	{% block js %}{% endblock %}
+</head>
+<body>
+	<div class="navbar">
+		<div class="container">
+			<ul class="nav">
+				<!--<li class="nav_li active"><a href="/">首页</a></li>
+				<li class="nav_li"><a href="javascript:void(0);">话题</a></li>
+				<li class="nav_li"><a href="javascript:void(0);">节点</a></li>
+				<li class="nav_li"><a href="javascript:void(0);">用户</a></li>-->
+				<li > <a href="/"><img alt="" src="/static/images/header-logo.png"></li></a>
+			</ul>
+			{% if user.is_authenticated %}
+  			<ul class="login_btn_group">
+				<li class="nav_li"><a href="/setting_avatar/"><img src="{{ user.userinfo.image.url }}"/ class="my_avatar_image"></a></li>
+    			<li class="nav_li"><a href="/setting_index/">{{ user.username }}</a></li>
+    			<li class="nav_li"><a href="/logout/">注销</a></li>
+			</ul>
+			{% else %}
+			<ul class="login_btn_group">
+				<li class="nav_li"><a href="/signup/">注册</a></li>
+				<li class="nav_li"><a href="/login/">登入</a></li>
+			</ul>
+			{% endif %}
+		</div>
+	</div>
+	{% block content %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ordering notice</title></head>
+
+<body>
+
+<ul>
+{% for item in item_list %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+<p>Sincerely,<br />{{ company }}</p>
+<form action="/resetpwd/" class="form_style" method="post">
+				<h2>改密码</h2>
+				<div class="form_group">
+					<label for="old_password">旧密码:</label>
+					<input type="password" id="old_password" class="form_input" name="old_password" placeholder="请输入您的账号"/>
+				</div>
+				<div class="form_group">
+					<label for="new_password">密码:</label>
+					<input type="password" id="password" class="form_input" name="password" placeholder="请输入您的密码"/>
+				</div>
+				<div class="form_group">
+					<label for="new_password2">密码:</label>
+					<input type="password" id="repassword" class="form_input" name="repassword" placeholder="请输入您的密码"/>
+				</div>
+				<div class="form_group">
+					<button class="btn">登入</button>
+					<a href="/forget/" class="form_link">忘记密码</a>
+				</div>
+			</form>
+<form action="/posttopic/" class="form_style" method="post">
+				<h2>发帖</h2>
+				<div class="form_group">
+					<label for="old_password">NODE:</label>
+					<input type="text" id="node" class="form_input" name="node" placeholder="请输入您的账号"/>
+				</div>
+				<div class="form_group">
+					<label for="new_password">TITLE:</label>
+					<input type="text" id="title" class="form_input" name="title" placeholder="请输入您的密码"/>
+				</div>
+				<div class="form_group">
+					<label for="new_password2">CONTENT:</label>
+					<input type="text" id="content" class="form_input" name="content" placeholder="请输入您的密码"/>
+				</div>
+				<div class="form_group">
+					<button class="btn">登入</button>
+					<a href="/forget/" class="form_link">忘记密码</a>
+				</div>
+			</form>
+			<form action="/setting_avatar/" enctype="multipart/form-data" method="post">
+				<input type="file" name="file" />
+				<input type="submit" name="submit" value="上传">
+			</form>
+</body>
+</html>

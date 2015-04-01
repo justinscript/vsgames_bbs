@@ -1,0 +1,144 @@
+
+.topic_wrap{
+	border-radius: 3px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.topic_content{
+	padding: 10px;
+	font-size: 14px;
+	line-height: 1.6;
+	color: #000;
+	overflow: hidden;
+	word-break: break-word;
+}
+
+.topic_head{
+	padding: 10px;
+	line-height: 120%;
+	text-align: left;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.big_avatar{
+	display: block;
+	float: right;
+}
+
+.big_avatar img{
+	border-radius: 4px;
+	width: 75px;
+	height: 75px;
+}
+
+.bar{
+	margin-bottom: 10px;
+}
+
+.bar a{
+	color: #778087;
+	text-decoration: none;
+}
+
+.bar a:hover{
+	text-decoration: underline;
+}
+
+.topic_title{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 150%;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+}
+
+.date{
+	color: #999;
+	font-size: smaller;
+	line-height: 120%;
+	position: relative;
+}
+.dianzan_link{
+	position: absolute;
+	top: -2px; 
+}
+.dianzan{
+	width: 50px;
+	height: 20px;
+}
+.dianzan_span{
+	color: #555;
+	font-size: 14px;
+}
+.no_replies{
+	border: 2px dashed #888;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.25);
+	font-size: 12px;
+	margin: 20px 0;
+	padding: 8px 35px 8px 14px;
+	border-radius: 4px;
+	color: #999;
+}
+.reply_wrap{
+	background-color: #fff;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.reply_div{
+	padding: 10px;
+	border-top: 1px solid #e2e2e2;
+}
+
+.first_reply{
+	border: 0;
+}
+.reply_avatar{
+	float: left;
+	margin-right: 10px;
+}
+.reply_avatar img{
+	width: 48px;
+	height: 48px;
+	border-radius: 3px;
+}
+
+.reply_name{
+	text-decoration: none;
+	color: gray;
+	font-size: 12px;
+	line-height: 120%;
+	margin-right: 5px;
+}
+
+.reply_name:hover{
+	color: #385f8a;
+}
+
+.reply_time{
+	color: #ccc;
+	font-size: 11px;
+}
+.reply{
+	margin-top: 5px;
+	font-size: 12px;
+}
+.realease_wrap{
+	padding: 10px;
+}
+.realease_title{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e2e2e2;
+	margin-bottom: 8px;
+	font-size: 13px;
+}
+.realease_textarea{
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	height:auto!important;  
+	height:230px;  
+	min-height:230px; 
+	padding: 3px;
+}

@@ -1,0 +1,34 @@
+{% extends "base3.html" %}
+{% block style %}<link rel="stylesheet" type="text/css" href="/static/css/setting.css">{% endblock %}
+{% block title %}黑狮情报所 - 激战2玩家社区{% endblock %}
+{% block js %}<script type="text/javascript" src="/static/js/setting_userinfo.js"></script>{% endblock %}
+{% block index_left %}	
+	<div class="index_left">
+		<div class="setting_wrap">
+			<div class="s_form_wrap">
+				<h1 class="form_title">个人信息设置</h1>
+				<form action="#" id="reset_info_form" method="post">
+					<div class="input_wrap clearfix">
+						<label for="userid">用户名</label>
+						<input type="text" class="form_input" id="userid" name="userid" value="{{ user.username }}" readonly/>
+					</div>
+					<div class="input_wrap clearfix">
+						<label for="email">邮箱</label>
+						<input type="text"  class="form_input" id="email" name="email" value="{{ user.email }}" readonly/>
+					</div>
+					<div class="input_wrap clearfix">
+						<label for="nickname">昵称</label>
+						<input type="text"  class="form_input" id="nickname" name="nickname" value="{{ user.first_name }}" placeholder="请设置您的昵称"/>
+					</div>
+					<div class="input_wrap clearfix">
+						<label for="description">个性签名</label>
+						<input type="text"  class="form_input" id="description" name="description" value="{{ user.userinfo.description }}"  placeholder="请设置您的个性签名"/>
+					</div>
+					<div class="input_wrap clearfix">
+						<button class="my_btn" id="reset_info">设置</button>
+					</div>
+				</form>
+			</div>
+		</div>				
+	</div>
+{% endblock %}

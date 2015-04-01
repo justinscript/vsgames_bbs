@@ -1,0 +1,62 @@
+{% extends "base2.html" %}
+{% block style %}<link rel="stylesheet" type="text/css" href="/static/css/topic.css">{% endblock %}
+{% block title %}黑狮情报所 - 激战2玩家社区{% endblock %}
+{% block js %}<script type="text/javascript" src="/static/js/display_topic.js"></script>{% endblock %}
+{% block index_left %}	
+	<div class="index_left">
+				<div class="topic_wrap">
+					<div class="topic_head">
+						<a href="javascript:void(0);" class="big_avatar"><img src="{{ topic.user.userinfo.image.url }}"/></a>
+						<p class="bar"><a href="/index/">vsgames</a>&nbsp;&gt;&nbsp;<a href="javascript:void(0);">{{ topic.node.title }}</a></p>
+						<p class="topic_title">{{ topic.title }}</p>
+						<p class="date">{{ topic.user.username }} · {{ topic.get_display_datetime }} · {{ topic.hits }} 次点击
+						
+						</p>
+						<p>
+						{% if user in topic.node.mayor.all %}
+						<a href="javascript:void(0);" id="delete">删除</a>
+						{% endif %}
+						{% if user.id != topic.user.id and user.is_authenticated %}
+						<a href="javascript:void(0);" id="fav">收藏</a>	
+						{% endif %}
+						</p>
+
+					</div>
+					<div class="topic_content">
+						{{ topic.content|safe }}
+					</div>
+				</div>
+				{% if not replys %}
+				<div class="no_replies">
+			        暂无回复，说出你的观点吧
+			    </div>
+			    {% else %}
+				<div class="reply_wrap">
+					{% for reply in replys %}
+					{% if forloop.first %}<div class="reply_div first_reply clearfix">{% else %}<div class="reply_div clearfix">{% endif %}				
+						<div class="reply_avatar">
+							<img src="{{ reply.user.userinfo.image.url }}"/>
+						</div>
+						<div class="reply_content">
+							<p>
+								<a href="javascript:void(0);" class="reply_name">{{ reply.user.username }}</a>
+								<span class="reply_time">{{ reply.get_display_datetime }}</span>
+							</p>
+							<p class="reply">
+								{{ reply.content }}
+							</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				{% endif %}
+				<div class="block_wrap realease_wrap">
+				<form method="post" action="#" id="reply_form">
+					<input type="hidden" value="{{ topic.id }}" name="topic_id" class="topic_id"/>
+					<p class="realease_title">创建新的回复</p>
+					<textarea class="realease_textarea" placeholder="回复内容" name="content"></textarea>
+					<input type="submit" class="my_btn" id="reply_btn" value="立即回复"/>
+				</form>
+				</div>
+			</div>
+{% endblock %}

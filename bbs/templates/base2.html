@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block content %}
+		<div class="wrap">
+
+		<div id="top-logo">
+			<a href="/"></a>
+		</div>
+
+		<div class="contain clearfix">
+			{% block index_left %}{% endblock %}
+			<div class="index_right">
+				{% if not user.is_authenticated %}
+				<!--<div class="block_wrap">
+					<div class="intro_wrap">
+						<p class="intro_english">vsgames</p>
+						<p class="intro_chinese">说你想说，想你所想</p>
+					</div>
+					<div class="btn_group">
+						<a href="/login/" class="login_btn my_btn">登录</a>
+						<a href="/signup/" class="signup_btn my_btn">注册</a>
+						<p class="forget_p">已注册用户也可以<a href="/forget/" class="forget_link">找回密码</a></p>
+					</div>
+				</div> -->
+							
+				{% else %}
+				<!--<div class="block_wrap">-->
+					<!--<div class="avatar_wrap clearfix">
+						<a href="/setting_index/">
+							<img src="{{ user.userinfo.image.url }}"/ class="my_avatar_image">
+						</a>
+						<p class="username">{{ user.username }}</p>
+					</div>-->
+					<!--<div class="statistics_wrap clearfix">
+						<div class="status status-topic">
+                    		<strong>
+                    			<a href="/user/post">{{ user.userinfo.get_topic_count }}</a>
+                    		</strong> 主题
+                		</div>
+                		<div class="status status-reply">
+		                    <strong>
+		                    	<a href="/user/reply">{{ user.userinfo.get_reply_count }}</a>
+		                    </strong> 回复
+		                </div>
+		                <div class="status status-favorite">
+		                    <strong>
+		                    	<a href="/user/fav">{{ user.userinfo.get_fav_counts }}</a>
+		                    </strong> 收藏
+		                </div>
+		                <div class="status status-reputation">
+		                    <strong>{{ user.userinfo.coins }}</strong> 威望
+		                </div>
+					</div>-->
+				<!--</div>	-->			
+				{% endif %}
+
+				<div class="block_wrap">
+					<div class="first_list">
+					搜索
+					</div>
+					<div class="friendship_div">
+						<form action="/search">
+							<input type="text" name="key">
+							<input type="submit" value="搜索">
+						</form>
+					</div>
+				</div> 
+
+				<div class="block_wrap">
+					<div class="p-header">社区介绍</div>
+					<div class="friendship_div">
+						本社区由《激战2》游戏玩家以及百度激战2吧用户共同组建而成，旨在给《激战2》爱好者创造一个和谐的交流社区。
+						<br>
+						社区欢迎大家分享视频攻略、图文攻略、玩家心得，支持原创，并由玩家一起组织举办各种活动。
+						<br><br>
+						社区QQ群：413893385
+						<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=c349934b66c8b122b4c648084a2a5e7e7db7c30f60c26c6eda22d4652dc57a3d"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="黑狮情报所" title="黑狮情报所"></a>
+					</div>
+				</div>
+
+				<div class="block_wrap">
+					<div class="first_list">热门主题</div>
+					<div class="friendship_div">
+						<ul>
+							<li>
+								<span title="回复数">34</span>
+								<a href="/topic/3" target="_blank">徐帅,你好</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="block_wrap">
+					<div class="first_list">
+					社区状态
+					</div>
+					<div class="friendship_div">
+						<p>注册用户：<span>3</span></p>
+						<p>主题数量：<span>5</span></p>
+						<p>回复数量：<span>1</span></p>
+					</div>
+				</div>
+
+				<div class="block_wrap">
+					<div class="first_list">友情链接</div>
+					<div class="friendship_div">
+						<ul>
+							<li class="friendship_link"><a href="http://blog.csdn.net/xiao__gui" target="_blank">叉叉哥Blog</a></li>
+							<li class="friendship_link"><a href="http://jie-xu.github.io/" target="_blank">徐神Blog</a></li>
+							<li class="friendship_link"><a href="http://lawrence-zxc.github.io/" target="_blank">Jeck_Zhang Blog</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="footer">
+			<p><a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备15002890号-1</a></p>
+			<p>联系邮箱：<a href="mailto:webmaster@vsgames.cn">webmaster@vsgames.cn</a> <a href="/aboutus" target="_blank">关于我们</a></p>
+			<p>Copyright © 2015 vsgames.cn All Rights Reserved</p>
+		</div>
+	</div>
+{% endblock %}

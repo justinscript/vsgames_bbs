@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}注册{% endblock %}
+{% block js %}<script type="text/javascript" src="/static/js/signup.js"></script>{% endblock %}
+{% block content %}	
+	<div class="wrap">
+		<div class="formdiv">
+			<form action="#" class="form_style" id="signup_form" method="post">
+				<h2>注册</h2>
+				<div class="form_group">
+					<label for="account">账号:</label>
+					<input type="text" id="username" class="form_input" name="username" placeholder="请输入4-16位的数字、字母"/>
+				</div>
+				<div class="form_group">
+					<label for="email">邮箱:</label>
+					<input type="text" id="email" class="form_input" name="email" placeholder="请输入您的邮箱"/>
+				</div>
+				<div class="form_group">
+					<label for="password">密码:</label>
+					<input type="password" id="password" class="form_input" name="password" placeholder="请设置您的6位数密码"/>
+				</div>
+				<div class="form_group">
+					<label for="repassword">重复密码:</label>
+					<input type="password" id="repassword" class="form_input" name="repassword" placeholder="请重复输入您的密码"/>
+				</div>
+				<div class="form_group">
+					<button class="btn" id="signup_btn">注册</button>
+					<a href="/login/" class="form_link">已经有账号？</a>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block js %}<script type="text/javascript" src="/static/js/forget_pwd.js"></script>{% endblock %}
+{% block title %}黑狮情报所 - 激战2玩家社区{% endblock %}
+{% block content %}	
+	<div class="wrap">
+		<div class="formdiv">
+			<form action="#" class="form_style" id="forget_form" method="post">
+				<h2>重置密码</h2>
+				<div class="form_group">
+					<label for="email">邮箱:</label>
+					<input type="text" id="email" class="form_input" name="email" placeholder="请输入您的邮箱"/>
+				</div>
+				<div class="form_group">
+					<button class="btn" id="forget_btn">发送验证邮件</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,76 @@
+.setting_wrap{
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.avatar_right{
+	float: right;
+	margin: 2px 10px 0 0;
+}
+
+.avatar_right p{
+	color: #999;
+	line-height: 20px;
+	font-size: 13px;
+}
+
+.info_wrap{
+	padding-bottom: 1px;
+}
+.info_wrap table{
+	margin: 15px;
+}
+
+.info_wrap tr{
+	height: 30px;
+	font-size: 13px;
+}
+.first_td{
+	text-align: right;
+	width: 50px;
+	padding-right: 15px;
+}
+
+/*reset_pwd*/
+.s_form_wrap{
+	padding:10px;
+}
+
+.form_title{
+	font-size: 18px;
+	line-height: 40px;
+	color: #333333;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+#reset_pwd_form{
+	margin-top: 20px;
+}
+.input_wrap{
+	margin-bottom: 20px;
+}
+.input_wrap label{
+	float: left;
+	width: 160px;
+	padding-top: 10px;
+	text-align: right;
+	margin-right: 15px;
+	font-size: 13px;
+} 
+
+.input_wrap .form_input{
+	width: 280px;
+}
+
+#reset_pwd_1{
+	margin-left: 175px;
+}
+
+/*userinfo_setting*/
+#reset_info_form{
+	margin-top: 20px;
+}
+
+#reset_info{
+	margin-left: 175px;
+}

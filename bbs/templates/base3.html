@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+		<div class="wrap">
+
+		<div id="top-logo">
+			<a href="/"></a>
+		</div>
+
+		<div class="contain clearfix">
+			{% block index_left %}{% endblock %}
+			<div class="index_right">
+				<div class="nav_wrap">
+					<ul>
+						<li><a href="/setting_index/">用户中心</a></li>
+						<li><a href="/setting_userinfo/">信息设置</a></li>
+						<li><a href="/setting_avatar/">头像修改</a></li>
+						<li><a href="/resetpwd/">修改密码</a></li>
+						<li><a href="/index/">返回首页</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p><a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备15002890号-1</a></p>
+			<p>联系邮箱：<a href="mailto:webmaster@vsgames.cn">webmaster@vsgames.cn</a> <a href="/aboutus" target="_blank">关于我们</a></p>
+			<p>Copyright © 2015 vsgames.cn All Rights Reserved</p>
+		</div>
+	</div>
+{% endblock %}
