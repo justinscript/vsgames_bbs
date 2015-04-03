@@ -89,10 +89,10 @@ STATICFILES_DIRS = (
 # 修改上传时文件在内存中可以存放的最大size为10m
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760
 
-MYSQL_HOST = '218.244.131.97'
+MYSQL_HOST = '192.168.0.105'
 MYSQL_PORT = '3306'
-MYSQL_USER = 'root'
-MYSQL_PASS = 'zhiyouba'
+MYSQL_USER = 'vsgames'
+MYSQL_PASS = 'vsgames'
 MYSQL_DB   = 'bbs'
 
 DATABASES = {
@@ -111,5 +111,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'zhangxiongcai337@163.com'
-EMAIL_HOST_PASSWORD = '3141592653'
+EMAIL_HOST_PASSWORD = '123456'
 EMAIL_USE_SSL = False
